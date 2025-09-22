@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Java
+/Users/hebaqi/Desktop/UVA/Career/leetcode/java_template/out/
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+
+
