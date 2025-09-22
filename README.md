@@ -49,4 +49,17 @@ Notes:
 - The sample expected outputs are placeholders. Update `expected` once you implement the real logic.
 - You can replace tests with ones matching your current LeetCode problem.
 
+### Make scripts executable (first time only)
+
+If you see `permission denied` when running a `.sh` file, grant execute permission once:
+
+```bash
+chmod +x /Users/hebaqi/Desktop/UVA/Career/leetcode/python3/python3_template/run_solution.sh
+chmod +x /Users/hebaqi/Desktop/UVA/Career/leetcode/python3/python3_template/judge.sh
+
+chmod +x /Users/hebaqi/Desktop/UVA/Career/leetcode/java/java_template/build.sh
+chmod +x /Users/hebaqi/Desktop/UVA/Career/leetcode/java/java_template/run_solution.sh
+chmod +x /Users/hebaqi/Desktop/UVA/Career/leetcode/java/java_template/judge.sh
+```
+
 

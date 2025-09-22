@@ -1,9 +1,18 @@
 from typing import List, Tuple
-
+from collections import defaultdict
 
 class Solution:
     def maxSubarrayLength(self, nums: List[int], k: int) -> int:
-        return 0
+        cnt = defaultdict(int)
+        left = 0
+        res = 0
+        for right, c in enumerate(nums):
+            cnt[c] += 1
+            while cnt[c] > k:
+                cnt[nums[left]] -= 1
+                left += 1
+            res = max( right - left + 1, res)
+        return res
 
 
 def _run_sample_tests() -> None:

@@ -1,8 +1,21 @@
 import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Solution {
     public int maxSubarrayLength(int[] nums, int k) {
-        return 0;
+        int res = 0, left = 0;
+        Map<Integer, Integer> cnt = new HashMap<>();
+        for( int right = 0; right < nums.length; right++){
+            int n = nums[right];
+            cnt.merge(n, 1, Integer::sum);
+            while( cnt.get(n) > k){
+                cnt.merge(nums[left], -1, Integer::sum);
+                left++;
+            }
+            res = Math.max( res, right - left + 1);
+        }
+        return res;
     }
 
     private static class TestCase {
