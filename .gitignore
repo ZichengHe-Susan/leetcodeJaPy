@@ -4,7 +4,7 @@ __pycache__/
 .venv/
 
 # Java
-/Users/hebaqi/Desktop/UVA/Career/leetcode/java_template/out/
+**/out/
 
 # macOS
 .DS_Store
@@ -12,5 +12,4 @@ __pycache__/
 # Editor
 .idea/
 .vscode/
-
 

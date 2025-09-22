@@ -3,35 +3,46 @@
 This repo provides runnable skeletons for solving LeetCode-style problems locally in Python and Java. Each template includes:
 
 - `Solution` class with the required signature
-- Public tests runner (quick feedback)
+- Embedded public tests inside the solution file (quick feedback)
 - Judge runner with public + hidden tests (simulate full submission)
 
-### Python (python3_template)
+### Python (python3/python3_template)
 
 Files:
-- `solution.py`: implement `Solution.maxSubarrayLength(self, nums: List[int], k: int) -> int`
-- `run_tests.py`: runs 1-3 public tests
-- `judge.py`: runs public + hidden tests
-- `run_tests.sh`, `judge.sh`: convenience scripts
+- `solution.py`: implement `Solution.maxSubarrayLength(self, nums: List[int], k: int) -> int`. Contains embedded public tests and a `__main__` entrypoint.
+- `judge.py`: runs public + hidden tests.
+- `run_solution.sh`, `judge.sh`: convenience scripts.
 
-Run:
+Run embedded public tests:
 ```bash
-sh /Users/hebaqi/Desktop/UVA/Career/leetcode/python3_template/run_tests.sh
-sh /Users/hebaqi/Desktop/UVA/Career/leetcode/python3_template/judge.sh
+sh /Users/hebaqi/Desktop/UVA/Career/leetcode/python3/python3_template/run_solution.sh
+# or directly
+python3 /Users/hebaqi/Desktop/UVA/Career/leetcode/python3/python3_template/solution.py
 ```
 
-### Java (java_template)
+Run judge (public + hidden):
+```bash
+sh /Users/hebaqi/Desktop/UVA/Career/leetcode/python3/python3_template/judge.sh
+```
+
+### Java (java/java_template)
 
 Files:
-- `src/Solution.java`: implement `public int maxSubarrayLength(int[] nums, int k)`
-- `src/TestRunner.java`: runs 1-3 public tests
-- `src/Judge.java`: runs public + hidden tests
-- `build.sh`, `run_tests.sh`, `judge.sh`
+- `src/Solution.java`: implement `public int maxSubarrayLength(int[] nums, int k)`. Contains a `main` method with embedded public tests.
+- `src/Judge.java`: runs public + hidden tests.
+- `build.sh`, `run_solution.sh`, `judge.sh`.
 
-Build and run:
+Run embedded public tests:
 ```bash
-sh /Users/hebaqi/Desktop/UVA/Career/leetcode/java_template/run_tests.sh
-sh /Users/hebaqi/Desktop/UVA/Career/leetcode/java_template/judge.sh
+sh /Users/hebaqi/Desktop/UVA/Career/leetcode/java/java_template/run_solution.sh
+# or directly
+sh /Users/hebaqi/Desktop/UVA/Career/leetcode/java/java_template/build.sh && \
+java -cp /Users/hebaqi/Desktop/UVA/Career/leetcode/java/java_template/out Solution
+```
+
+Run judge (public + hidden):
+```bash
+sh /Users/hebaqi/Desktop/UVA/Career/leetcode/java/java_template/judge.sh
 ```
 
 Notes:
