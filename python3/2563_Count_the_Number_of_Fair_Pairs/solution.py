@@ -11,6 +11,8 @@ class Solution:
             
             res += right - left
         return res
+        # time complexity: O(nlog(n)) for sorting, O(n*log(n)) for binary search of each num ->O(nlog(n))
+        # space complexity: ignore sorting space cost would be O(1) 
     
 
 def _run_code() -> None:
